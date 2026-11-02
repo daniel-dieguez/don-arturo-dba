@@ -37,6 +37,19 @@ La mayoría de los SP siguen la misma estructura de operaciones, seleccionadas m
 
 > Algunos SP, como `SP_Modulo_Login` y `SP_Modulo_Dashboard`, pueden tener opciones distintas por la naturaleza de su función.
 
+### Columnas de auditoría
+
+La mayoría de las tablas incluyen las siguientes columnas de auditoría:
+
+| Columna | Descripción |
+|---------|-------------|
+| `creado` | Fecha y hora en que se creó el registro. |
+| `creadoPor` | ID de la persona que creó el registro. |
+| `actualizado` | Fecha y hora de la última actualización. |
+| `actualizadoPor` | ID de la persona que realizó la última actualización. |
+
+Con estas columnas es posible saber **cuándo** se creó o modificó un registro y **quién** lo hizo, ya que `creadoPor` y `actualizadoPor` almacenan el ID de la persona responsable. Esto permite llevar un registro de los movimientos y facilita la trazabilidad y la revisión de cambios.
+
 ### Tablas por módulo - pequeña intruducción.
 
 **Administración (ADM)**
